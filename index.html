@@ -483,29 +483,39 @@
         }
 
         /* Certifications */
-        .cert-card {
-            background: rgba(102, 126, 234, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 2px solid var(--primary);
-            text-align: center;
-            max-width: 500px;
-            margin: 0 auto;
-            opacity: 0;
-            transform: rotateY(90deg);
-            transition: all 0.8s;
-        }
+       .cert-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .cert-card.visible {
-            opacity: 1;
-            transform: rotateY(0);
-        }
+.cert-card {
+    background: rgba(102, 126, 234, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--primary);
+    text-align: center;
+    max-width: 500px;
+    flex: 1;
+    min-width: 300px;
+    opacity: 0;
+    transform: rotateY(90deg);
+    transition: all 0.8s;
+}
 
-        .cert-card i {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
+.cert-card.visible {
+    opacity: 1;
+    transform: rotateY(0);
+}
+
+.cert-card i {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
 
         /* Contact Section */
         .contact-grid {
@@ -916,8 +926,9 @@
     </section>
 
     <!-- Certifications Section -->
-    <section id="certifications">
-        <h2 class="section-title">Certifications</h2>
+   <section id="certifications">
+    <h2 class="section-title">Certifications</h2>
+    <div class="cert-container">
         <div class="cert-card scroll-animate">
             <i class="fas fa-certificate"></i>
             <h3>IBM Artificial Intelligence</h3>
@@ -931,7 +942,9 @@
             <p>Certified in 2025</p>
             <p>Comprehensive certification in call center, making verbal research and analysing </p>
         </div>
-    </section>
+    </div>
+</section>
+    
 
     <!-- Contact Section -->
     <!-- Contact Section -->
